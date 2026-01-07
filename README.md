@@ -29,18 +29,17 @@ organização do código e boas práticas iniciais.
 Banco/Tabela_Agenda.sql
   src/main/
     java/
-      |__ control/
-        |__Contato.java
-        |__DAO.java
-      |__ model/
-        |__contato.java
-      |__ view/
-        |__index.java
+      control/
+          Contato.java
+          DAO.java
+      model/
+          contato.java
+      view/
+          index.java
     webapp/
-      |__ css/
-        |__styles.css
-      |__ index.jsp
-      |__ index2.jsp
+      css/styles.css
+      index.jsp
+      index2.jsp
 
 ------------------------------------------------------------------------------------
 
