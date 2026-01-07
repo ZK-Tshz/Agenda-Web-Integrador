@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #6e5c62;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #312b2d;
+    border-radius: 10px;
+    background-color: #312b2d;
+    box-shadow: 20px 20px 20px #08080885;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h1, h2 {
+    font-family: 'Mitr', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+
+input[type="text"], select, button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #4C4347;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #6e5c62;
+    transition: border 0.2s, backgroud-color 0.2s, box-shadow 0.2s;
+}
+input[type="text"] {
+    width: 95%;
+}
+input[type="text"]:focus {
+    border-bottom: 0.5em solid #4C4347;
+    border-right: 0.5em solid #4C4347;
+    outline: none;
+}
+input.id {
+    background-color: #615458;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1 1 cal(33.333% - 10px);
+    color: black;
+    font-family: 'Mitr', sans-serif;
+}
+
+
+
+
+button.excluir {
+    background-color: #FA6E6E;
+}
+button.excluir:hover {
+    background-color: #ff0000;
+}
+
+
+
+button.salvar {
+    background-color: #3aa394;
+}
+button.salvar:hover {
+    background-color: #00ffd9;
+}
+
+
+button.novo {
+    background-color: #d3ad69;
+}
+button.novo:hover {
+    background-color: #ffa200;
+}
+
+
+
+button.navegacao {
+    background-color: #d3ad69;
+}
+button.navegacao:hover {
+    background-color: #ffa200;
+}
