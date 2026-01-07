@@ -30,15 +30,15 @@ organização do código e boas práticas iniciais.
   |__ Tabela_Agenda.sql
   src/main/
     java/
-      |__ control
+      |__ control/
         |__Contato.java
         |__DAO.java
-      |__ model
+      |__ model/
         |__contato.java
-      |__ view
+      |__ view/
         |__index.java
     webapp/
-      |__ css
+      |__ css/
         |__styles.css
       |__ index.jsp
       |__ index2.jsp
