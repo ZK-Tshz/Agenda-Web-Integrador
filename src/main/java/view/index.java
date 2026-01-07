@@ -79,10 +79,14 @@ public class index extends HttpServlet {
 				try {
 					if (txtId.equals(null) || txtId.isEmpty() || txtId.equals("0")) {
 						c.InserirContato(model);
-						response.getWriter().println("<html><body><script>alert('"+ "Contato Cadastrado" + "'); window.location='index.jsp';</script></body></html>");
+						response.getWriter().println("<script>alert('"+ "Contato Cadastrado" + "');"
+								+ " window.location='index.jsp';</script>");
+						return;
 					} else {
 						c.AtualizaContato(model);
-						response.getWriter().println("<html><body><script>alert('"+ "Contato Atualizado" + "'); window.location='index.jsp';</script></body></html>");
+						response.getWriter().println("<script>alert('"+ "Contato Atualizado" + "');"
+								+ " window.location='index.jsp';</script>");
+						return;
 					}
 				} catch (Exception ex) {
 					ex.printStackTrace();
@@ -91,8 +95,9 @@ public class index extends HttpServlet {
 			case "excluir":
 				try {
 					c.ExcluiContato(Integer.parseInt(txtId));
-					response.getWriter().println("<html><body><script>alert('" + "Contato Exluido" + "'); "+
-					"window.location='index.jsp';</script></body></html>");
+					response.getWriter().println("<script>alert('" + "Contato Exluido" + "'); "+
+					"window.location='index.jsp';</script>");
+					return;
 				} catch (NumberFormatException e) {
 					e.printStackTrace();
 				} catch (SQLException e) {
