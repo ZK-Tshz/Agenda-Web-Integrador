@@ -35,4 +35,14 @@ public class DAO {
 			e.printStackTrace();
 		}
 	}
+	public Connection abreConsulta(String user, String pass) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection(url, user, pass);
+			return conn;
+		} catch (SQLException | ClassNotFoundException e) {
+			System.out.println(e.toString());
+			return null;
+		}
+	}
 }
