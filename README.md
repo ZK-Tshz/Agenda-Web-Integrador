@@ -28,8 +28,8 @@ organização do código e boas práticas iniciais.
 # Estrutura do Projeto
 Banco/Tabela_Agenda.sql
   src/main/
+  
     java/
-    
       control/
           Contato.java
           DAO.java
@@ -37,6 +37,7 @@ Banco/Tabela_Agenda.sql
           contato.java
       view/
           index.java
+          
     webapp/
       css/styles.css
       index.jsp
