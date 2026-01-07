@@ -25,6 +25,3 @@ INSERT INTO contato (nome, telefone, endereco, complemento, cidade, estado) VALU
 );
 
 SELECT * FROM contato;
-#DELETE FROM contato WHERE id = 3;
-#DROP TABLE contato;
-#DROP DATABASE agenda;
