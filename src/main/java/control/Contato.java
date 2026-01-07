@@ -4,11 +4,15 @@ import control.*;
 import java.sql.*;
 import java.util.*;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 import control.DAO;
 
 public class Contato {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
+	private Statement st;
 	private ResultSet rs;
 	private String sql;
 	
@@ -75,7 +79,7 @@ public class Contato {
 		try {
 			database.abreConexao();
 			sql = "UPDATE contato SET nome=?, telefone=?, endereco=?, "
-					+ "complemento=?, cidade=?, estado=?, WHERE id=?";
+					+ "complemento=?, cidade=?, estado=? WHERE id=?";
 			stmt = database.abreConexao().prepareStatement(sql);
 			
 			stmt.setString(1, c.getNome());
@@ -87,6 +91,8 @@ public class Contato {
 			stmt.setInt(7, c.getId());
 			
 			stmt.executeUpdate();
+			
+			
 		}
 		catch (SQLException e1) {
 			System.out.println(e1.getMessage());
@@ -190,4 +196,32 @@ public class Contato {
 			database.fechaConexao();
 		}
 	}
+	
+	public List<contato> consultaTodosContatos() {
+		List<contato> lista = new ArrayList<>();
+		sql="SELECT * FROM contato;";
+		DAO database = new DAO();
+		try {
+			stmt = 
+				database.abreConsulta("root", "").prepareStatement(sql);
+			rs = stmt.executeQuery();
+			while(rs.next()) {
+				contato c = new contato();
+				c.setId(rs.getInt("id"));
+	            c.setNome(rs.getString("nome"));
+	            c.setTelefone(rs.getString("telefone"));
+	            c.setEndereco(rs.getString("endereco"));
+	            c.setComplemento(rs.getString("complemento"));
+	            c.setCidade(rs.getString("cidade"));
+	            c.setEstado(rs.getString("estado"));
+	            lista.add(c);
+			}
+			return lista;
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		} finally {
+			database.fechaConexao();
+		}
+		return lista;
+	}	
 }
