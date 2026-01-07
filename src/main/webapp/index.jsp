@@ -8,66 +8,80 @@
 	<html lang="pt-br">
 	<head>
 	    <meta charset="UTF-8">
-	    <meta name="viewport" content"width=device-width, initual-scale=1.0">
+	    <meta name="viewport" content="width=device-width, initual-scale=1.0">
 	    <title>Cadastro de Contatos</title>
 	    <link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
+			<div id="esquerda">
+				<a href="/Agenda-Web-2C/">Cadastra Contato</a>
+				<a href="/Agenda-Web-2C/index2.jsp">Consulta Contato</a>			    
+			</div>
+		    <div id="direita">
+		        <button id="membros" onclick="membros()">Membros do Grupo</button>
+		    </div>
+		    <script>
+			    function membros() {
+			        alert(" Ana Luiza Maciel     nº01\n Kamila Sayuri          nº11\n Lorena Boechat       nº13\n Murilo Baptista        nº23")
+			    }
+			</script>
+		    
 	        <h1>Agenda Web</h1>
-	
 	        <form action="index" method="POST">
 	            <div class="container">
 	                <h2>Cadastro de Contato</h2>
-	                <div class="form-group">
-	                    <label for="id">Id</label>
-	                    <input type="text" id="txtId" name="txtId" class="id" 
-	                        value="${sessionScope.model.id}" readonly>
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="nome">Nome</label>
-	                    <input type="text" id="txtNome" name="txtNome" 
-	                        value="${sessionScope.model.nome}">
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="telefone">Telefone</label>
-	                    <input type="text" id="txtTelefone" name="txtTelefone" 
-	                        value="${sessionScope.model.telefone}">
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="endereco">Endereço</label>
-	                    <input type="text" id="txtEndereco" name="txtEndereco" 
-	                        value="${sessionScope.model.endereco}">
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="complemento">Complemento</label>
-	                    <input type="text" id="txtComplemento" name="txtComplemento"
-	                        value="${sessionScope.model.complemento}">
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="cidade">Cidade</label>
-	                    <input type="text" id="txtCidade" name="txtCidade" 
-	                        value="${sessionScope.model.cidade}">
-	                </div>
-	
-	                <div class="form-group">
-	                    <label for="estado">Estado</label>
-	                    <input type="text" id="txtEstado" name="txtEstado" 
-	                        value="${sessionScope.model.estado}">
-	                </div>
-	
-	                <div class="button-group">
-	                    <button type="submit" name="action" value="excluir" class="excluir">Excluir</button>
-	                    <button type="submit" name="action" value="primeiro" class="navegacao"><</button>
-	                    <button type="submit" name="action" value="anterior" class="navegacao"><-</button>
-	                    <button type="submit" name="action" value="novo" class="novo">Novo</button>
-	                    <button type="submit" name="action" value="proximo" class="navegacao">-></button>
-	                    <button type="submit" name="action" value="ultimo" class="navegacao">></button>
-	                    <button type="submit" name="action" value="salvar" class="salvar">Salvar</button>
+	                <div class="second-container">
+		                <div class="form-group">
+		                    <label for="id">Id</label>
+		                    <input type="text" id="txtId" name="txtId" class="id" 
+		                        value="${sessionScope.model.id}" readonly>
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="nome">Nome</label>
+		                    <input type="text" id="txtNome" name="txtNome" 
+		                        value="${sessionScope.model.nome}">
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="telefone">Telefone</label>
+		                    <input type="text" id="txtTelefone" name="txtTelefone" 
+		                        value="${sessionScope.model.telefone}">
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="endereco">Endereço</label>
+		                    <input type="text" id="txtEndereco" name="txtEndereco" 
+		                        value="${sessionScope.model.endereco}">
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="complemento">Complemento</label>
+		                    <input type="text" id="txtComplemento" name="txtComplemento"
+		                        value="${sessionScope.model.complemento}">
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="cidade">Cidade</label>
+		                    <input type="text" id="txtCidade" name="txtCidade" 
+		                        value="${sessionScope.model.cidade}">
+		                </div>
+		
+		                <div class="form-group">
+		                    <label for="estado">Estado</label>
+		                    <input type="text" id="txtEstado" name="txtEstado" 
+		                        value="${sessionScope.model.estado}">
+		                </div>
+		
+		                <div class="button-group">
+		                    <button type="submit" name="action" value="excluir" class="excluir">Excluir</button>
+		                    <button type="submit" name="action" value="primeiro" class="navegacao"><</button>
+		                    <button type="submit" name="action" value="anterior" class="navegacao"><-</button>
+		                    <button type="submit" name="action" value="novo" class="novo">Novo</button>
+		                    <button type="submit" name="action" value="proximo" class="navegacao">-></button>
+		                    <button type="submit" name="action" value="ultimo" class="navegacao">></button>
+		                    <button type="submit" name="action" value="salvar" class="salvar">Salvar</button>
+		                </div>
 	                </div>
 	            </div>	            
 		    </form>
