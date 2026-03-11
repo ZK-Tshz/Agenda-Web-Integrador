@@ -27,7 +27,8 @@ organização do código e boas práticas iniciais.
 
 # Estrutura do Projeto
 Banco/Tabela_Agenda.sql
-  src/main/
+src/
+  main/
   
     java/
       control/
